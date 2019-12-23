@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h3> {{msg}} </h3>
+		
+		<form action="{{url_for('index')}}" method="POST"> 
+			Item 1: <input type=text name=item1 />  <input type=number value=0 name=cost1 required/>
+			Item 2: <input type=text name=item2 />  <input type=number value=0 name=cost2 required/>
+			Item 3: <input type=text name=item3 />  <input type=number value=0 name=cost3 required/>
+		
+		<input type=submit name=action value="Show Cost" />
+		</form><br>
+		<h4> Total Cost is: {{total}} </h4>
+	</body>
+</html>
