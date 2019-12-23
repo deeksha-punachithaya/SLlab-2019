@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Author</title>
+</head>
+<body>
+	<table id='author'>
+		<th>Name</th>
+		<th>Native Country</th>
+		<th>Book title</th>
+		<th>Year of Publication</th>
+	</table>
+	<!-- <div id="table1">
+		<table id="table">
+		<tr>
+			<td>Name: </td>
+			<td><span id='name'></span></td>
+		</tr>
+		<tr>
+			<td>Cost: </td>
+			<td><span id='cost'></span></td>
+		</tr>
+		<tr>
+			<td>Ingredients: </td>
+			<td><span id='ingr'></span></td>
+		</tr>
+		</table>
+	</div> -->
+	<script>
+		/* document.getElementById('snacks').addEventListener("mouseover",snacks)
+		document.getElementById('drinks').addEventListener("mouseover",drinks)
+		function snacks(){
+			var myObj={
+				'name':'Misal Pav',
+				'cost':'40',
+				'ingr':'Maida, Spices, Aloo'
+			};
+			document.getElementById('table').removeAttribute('hidden');
+			document.getElementById('name').innerHTML=myObj.name;
+			document.getElementById('cost').innerHTML=myObj.cost;
+			document.getElementById('ingr').innerHTML=myObj.ingr;
+		}
+		function drinks(){
+			var myObj={
+				'name':'MilkShake',
+				'cost':'40',
+				'ingr':'Milk, syrup, sugar'
+			};
+			document.getElementById('table').removeAttribute('hidden');
+			document.getElementById('name').innerHTML=myObj.name;
+			document.getElementById('cost').innerHTML=myObj.cost;
+			document.getElementById('ingr').innerHTML=myObj.ingr;
+		} */
+		
+		myObj = [
+			{'name':'Enid Blyton','country':'England','book':'Famous Five','year':2000},
+			{'name':'ABC','country':'abc','book':'ABCabc','year':1999},
+			{'name':'ABC1','country':'abc1','book':'ABCabc1','year':1989},
+			{'name':'ABC2','country':'abc2','book':'ABCabc2','year':1872}
+		]
+		
+		function myFunction() {
+  			var table = document.getElementById("author");
+  			var row = table.insertRow(1);
+  			var cell1 = row.insertCell(0);
+  			var cell2 = row.insertCell(1);
+  			var cell3 = row.insertCell(2);
+  			var cell4 = row.insertCell(3);
+  			cell1.innerHTML = myObj[i].name;
+  			cell2.innerHTML = myObj[i].country;
+  			cell3.innerHTML = myObj[i].book;
+  			cell4.innerHTML = myObj[i].year;
+		}
+		
+		for (i = 0; i<2; i++) {
+			myFunction();
+		}
+		
+		for (i = i; i<4;i++) {
+			document.write('Name: '+myObj[i].name+'<br><br>');
+			document.write('Country: '+ myObj[i].country);
+			document.write('Book Title: '+ myObj[i].book);
+			document.write('Year: '+ myObj[i].year);
+		}
+	</script>
+	<style type="text/css">
+		#menu {
+			text-align: center;
+			width:100%;
+			font-size: xx-large;
+		}
+		#table {
+			font-size: xx-large;
+		}
+		th {
+			background-color: Tomato; 
+			color: White;
+		}
+		th:hover {
+			background-color: Indigo ;
+			color: White;
+		}
+		#table1 {
+			margin: 20px;
+			background-color: Tomato;
+		}
+	</style>
+</body>
+</html>

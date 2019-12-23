@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+	<title>ItemBill</title>
+	<script>
+		function calculate(){
+			qty=document.getElementById('qty').value
+			cost=document.getElementById('cost').value
+			document.getElementById('total').innerHTML = cost*qty
+			document.getElementById('cal').disabled = true
+			document.getElementById('paid').disabled = false
+		}
+		function paid(){
+			alert("PAID")
+			document.getElementById('total').innerHTML = ""
+			document.getElementById('name').value=""
+			document.getElementById('qty').value=0
+			document.getElementById('cost').value=0
+			document.getElementById('paid').disabled = true
+			document.getElementById('cal').disabled = false
+		}
+	</script>
+</head>
+<body>
+	<h4>Enter Data</h4>
+	<form>
+		Item Name: <input type="text" id='name'><br>
+		Quantity: <input type="number" value=0 id='qty'><br>
+		Cost: <input type="number" value=0 id='cost'><br>
+	</form>
+	<input type="button" value="Show Total" id='cal' onClick="calculate()">
+	<input type="submit" value="Paid" id='paid' onClick="paid()" disabled>
+	<p>Total: <span id='total'></span></p>
+</body>
